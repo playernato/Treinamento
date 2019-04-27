@@ -1,0 +1,61 @@
+Algoritmo "MinhaSaude"
+//Autor: Lucas Alves
+Var
+   idade: inteiro
+   genero: caracter
+   altura,peso,imc: real
+Inicio
+   Escreval("========================")
+   Escreval("| PROGRAMA +SAÚDE 2019 |")
+   Escreval("========================")
+   //Dados Iniciais
+   Escreva("Você é Homem ou Mulher? (H/M): ")
+   Leia(genero)
+   Se (genero = "H") entao
+      genero <- "Homem"
+   senao
+      Se(genero = "M") entao
+         genero <- "Mulher"
+      senao
+         genero <- "Gênero Desconhecido"
+      FimSe
+   FimSe
+   Escreva("Qual a sua idade? ")
+   Leia(idade)
+   Escreva("Qual é o seu peso(kg)? ")
+   Leia(peso)
+   Escreva("Qual é a sua altura(cm)? ")
+   Leia(altura)
+   imc <- peso/((altura/100)^2)
+   Escreval
+   Escreval("========================")
+   Escreval("|       RESULTADO      |")
+   Escreval("========================")
+   Escreval ("Seu Índice de Massa Corporal(IMC) é: ",imc:5:1)
+   Escreva("Você é " ,genero, ", tem",idade, " anos e ")
+   //CLASSIFICAÇÃO DE PESO PELO IMC PARA ADULTOS
+   Se (imc <= 18.5) entao
+      Escreval("está muito Abaixo do Peso")
+   senao
+        Se (imc > 18.5) e (imc < 24.9) entao
+           Escreval("está com Peso Normal.")
+        senao
+             Se (imc >= 25.0) e (imc < 29.9) entao
+                Escreval("está com Sobrepeso.")
+             senao
+                  Se (imc >= 30.0) e (imc < 34.9) entao
+                     Escreval("está com Obesidade Classe 1.")
+                  senao
+                       Se (imc >= 35.0) e (imc < 39.9) entao
+                          Escreval("está com Obesidade Classe 2.")
+                       senao
+                            Se (imc >= 40.0) entao
+                               Escreval("está com Obesidade Classe 3.")
+                            senao
+                            FimSe
+                       FimSe
+                  FimSe
+             FimSe
+        FimSe
+    FimSe
+Fimalgoritmo
