@@ -1,0 +1,31 @@
+Algoritmo "Partida_Futebol"
+// Disciplina  :  Algoritmos
+// Professor   : Gustavo Guanabara
+// Descrição   : Mostra a diferença de gols e o seu Status
+// Autor(a)    : Lucas Alves
+// Data atual  : 27/04/2019
+Var
+Dif,Time1,Time2: Inteiro
+Status: Caractere
+Inicio
+      Escreval ("-----------------------")
+      Escreval ("   FLAMENGO x VASCO    ")
+      Escreval ("-----------------------")
+      Escreva ("Quantos gols do FLAMENGO? ")
+      Leia(Time1)
+      Escreva ("Quantos gols do VASCO? ")
+      Leia(Time2)
+      Dif <- Abs(Time1 - Time2)
+      Escolha Dif
+             Caso 0
+                  Status <- "Empate"
+             Caso 1,2,3
+                  Status <- "Partida Normal"
+             OutroCaso
+                  Status <- "Goleada"
+      FimEscolha
+      Escreval ("-----------------------")
+      Escreval (" DIFERENÇA: ",Dif)
+      Escreval (" STATUS: ",Status)
+      Escreval ("-----------------------")
+Fimalgoritmo
